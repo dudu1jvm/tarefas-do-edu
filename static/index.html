@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tarefas do Edu</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <span class="nav-logo">Tarefas do Edu</span>
+    <div class="nav-links">
+      <a href="#hero">início</a>
+      <a href="#tarefas">tarefas</a>
+      <a href="#rotina">rotina</a>
+    </div>
+  </nav>
+
+  <section class="section" id="hero">
+    <div class="hero-content">
+      <p class="hero-tag">organize seu dia</p>
+      <h1 class="hero-title">Tarefas<br><span>do Edu</span></h1>
+      <div class="search-bar">
+        <span class="search-icon">&#128269;</span>
+        <input type="text" placeholder="pesquisar tarefas..." />
+      </div>
+    </div>
+    <a href="#tarefas" class="scroll-hint">&#8595; rolar</a>
+  </section>
+
+  <section class="section" id="tarefas">
+    <div class="section-content">
+      <p class="section-label">suas tarefas</p>
+      <h2 class="section-title">O que fazer hoje?</h2>
+      <div class="add-form">
+        <input id="task-input" placeholder="nova tarefa..." />
+        <button onclick="addTask()">+ adicionar</button>
+      </div>
+      <ul id="task-list"></ul>
+      <p class="counter" id="task-counter"></p>
+    </div>
+  </section>
+
+  <section class="section" id="rotina">
+    <div class="section-content">
+      <p class="section-label">sequência de hábitos</p>
+      <h2 class="section-title">Minha Rotina</h2>
+      <div id="routine-list"></div>
+      <div class="routine-form">
+        <input id="routine-name" placeholder="nome da rotina (ex: manhã)..." />
+        <input id="routine-step" placeholder="adicionar passo..." />
+        <div class="routine-buttons">
+          <button onclick="addRoutineStep()">+ passo</button>
+          <button onclick="saveRoutine()" class="btn-save">salvar rotina</button>
+        </div>
+        <ul id="new-steps-preview"></ul>
+      </div>
+    </div>
+  </section>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
